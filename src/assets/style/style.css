@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
+
+/* charcoal: #264653ff;
+persian-green: #2a9d8fff;
+maize-crayola: #e9c46aff;
+sandy-brown: #f4a261ff;
+burnt-sienna: #e76f51ff; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+    height: 100vh;
+}
