@@ -1,8 +1,6 @@
 <template>
   <div class="about">
-    <!-- <Topbar /> -->
     <Navbar />
-    <h1>This is an about page</h1>
     <AboutUs />
     <Footer />
   </div>

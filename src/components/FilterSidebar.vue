@@ -49,7 +49,6 @@ export default {
 /* The side navigation menu */
 .sidebar {
   margin: 0;
-  margin-top: 128px;  
   padding: 0;
   width: 300px;
   background-color: #f1f1f1;

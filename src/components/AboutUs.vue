@@ -1,4 +1,6 @@
 <template>
+
+<section>
   <div class="AboutUsContent">
     <p>
       Bothners stores offer a full range of musical instruments, live
@@ -31,17 +33,20 @@
       service nationwide.
     </p>
   </div>
+
+</section>
+
+
 </template>
 <script>
 export default {};
 </script>
 <style>
+
 .AboutUsContent {
-  
   width: 50%;
   margin: auto;
-  margin-top: 300px;
-  padding: 50px;
+  margin-top: 200px;
   background: rgba(128, 128, 128, 0.116);
   text-align: start;
 

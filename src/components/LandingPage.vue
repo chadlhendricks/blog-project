@@ -68,17 +68,20 @@ h1 {
 .row {
   text-align: center;
   padding-top: 270px;
+  backdrop-filter: blur(5px);
+  height: 100vh;
+
 }
 
 .neu-border {
   border-radius: 30px;
-  background: #f5f5f5;
+  background: #ffffff73;
   box-shadow: 8px 8px 15px #e4e4e4, -8px -8px 15px #ffffff;
 }
 .neu-border-inset {
   border-radius: 30px;
   background: #f5f5f5;
-  box-shadow: inset 8px 8px 15px #e4e4e4, inset -8px -8px 15px #ffffff;
+  box-shadow: inset 8px 8px 15px #e4e4e4, inset -8px -8px 15px #ffffff8f;
 }
 
 .form {
