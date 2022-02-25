@@ -11,10 +11,14 @@ burnt-sienna: #e76f51ff; */
   padding: 0;
   box-sizing: border-box;
   font-family: inherit;
+  overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 section {
     height: 100vh;
+}
+
+.sections{
 }

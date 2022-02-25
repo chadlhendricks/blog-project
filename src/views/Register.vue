@@ -1,46 +1,49 @@
 <template>
-  <form @submit.prevent="register" class="form neu-border">
-    <h2 class="form-heading">Register</h2>
-    <input
-      class="form-input neu-border-inset"
-      type="text"
-      v-model="name"
-      placeholder="Name"
-    />
-    <input
-      class="form-input neu-border-inset"
-      type="email"
-      v-model="email"
-      placeholder="Email"
-    />
-    <input
-      class="form-input neu-border-inset"
-      type="text"
-      v-model="contact"
-      placeholder="Contact Number"
-    />
-    <input
-      class="form-input neu-border-inset"
-      type="password"
-      v-model="password"
-      placeholder="Password"
-    />
-    <button type="submit" class="form-btn neu-border">Sign up</button>
-    <div class="form-social-login">
-      <button class="form-btn neu-border form-social-btn">
-        <i class="fab fa-google"></i>
-      </button>
-      <button class="form-btn neu-border form-social-btn">
-        <i class="fab fa-facebook-f"></i>
-      </button>
-    </div>
+  <section>
+    <form @submit.prevent="register" class="form neu-border">
+      <h2 class="form-heading">Register</h2>
+      <input
+        class="form-input neu-border-inset"
+        type="text"
+        v-model="name"
+        placeholder="Name"
+      />
+      <input
+        class="form-input neu-border-inset"
+        type="email"
+        v-model="email"
+        placeholder="Email"
+      />
+      <input
+        class="form-input neu-border-inset"
+        type="text"
+        v-model="contact"
+        placeholder="Contact Number"
+      />
+      <input
+        class="form-input neu-border-inset"
+        type="password"
+        v-model="password"
+        placeholder="Password"
+      />
+      <button type="submit" class="form-btn neu-border">Sign up</button>
+      <!-- <div class="form-social-login">
+        <button class="form-btn neu-border form-social-btn">
+          <i class="fab fa-google"></i>
+        </button>
+        <button class="form-btn neu-border form-social-btn">
+          <i class="fab fa-facebook-f"></i>
+        </button>
+      </div> -->
 
-    <p>
-      Already a member?
-      <router-link :to="{ name: 'Login' }">Sign in</router-link>
-    </p>
-  </form>
+      <p>
+        Already a member?
+        <router-link :to="{ name: 'Login' }">Sign in</router-link>
+      </p>
+    </form>
+  </section>
 </template>
+
 <script>
 export default {
   data() {
@@ -59,6 +62,20 @@ export default {
 };
 </script>
 <style>
+section {
+  background-image: url("https://picsum.photos/1920/1080");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
 .neu-border {
   border-radius: 30px;
   background: #f5f5f5;

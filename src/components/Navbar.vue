@@ -3,10 +3,11 @@
 
   <nav id="nav" :class="{ active: isActive }">
     <router-link @click="toggleNav" to="/">Home</router-link>
+    <router-link @click="toggleNav" :to="{ name: 'Products' }">Products</router-link>
     <router-link @click="toggleNav" :to="{ name: 'About' }">About Us</router-link>
     <router-link @click="toggleNav" :to="{ name: 'Blogs' }">Blogs</router-link>
     <router-link @click="toggleNav" :to="{ name: 'CreateBlog' }">Create Blog</router-link>
-    <router-link @click="toggleNav" :to="{ name: 'CreateBlog' }">Contact Us</router-link>
+    <router-link @click="toggleNav" :to="{ name: 'Contact' }">Contact Us</router-link>
 
 
   </nav>
@@ -34,14 +35,12 @@ export default {
 
 <style lang="scss">
 #nav {
-  position: fixed;
-  top: 40px;
+  position: relative;
   left: 0;
   width: 100%;
   text-align: center;
   // #f5f5f5
   background: #f5f5f5;
-  box-shadow: 8px 8px 15px #e4e4e4, -8px -8px 15px #ffffff;
   z-index: 199;
 }
 

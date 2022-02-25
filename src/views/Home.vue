@@ -1,17 +1,17 @@
 <template>
   <div class="home">
-    <Topbar/>
-    <Navbar/>
-    <LandingPage/>
+    <Navbar />
+    <LandingPage />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Topbar from "../components/Topbar.vue";
 import Navbar from "../components/Navbar.vue";
 import LandingPage from "../components/LandingPage.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
-  components: { Topbar, Navbar, LandingPage },
+  components: { Navbar, LandingPage, Footer },
 };
 </script>
