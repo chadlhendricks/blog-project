@@ -61,7 +61,7 @@
             <a href="/contact" class="text-reset">Help</a>
           </p>
           <p>
-            <a href="/contact" class="text-reset">Help</a>
+            <a href="/contact" class="text-reset">Contact Us</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -113,10 +113,14 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 footer {
   z-index: 202;
   bottom: 0;
+}
+
+p:hover {
+  color: #264653ff
 }
 
 </style>

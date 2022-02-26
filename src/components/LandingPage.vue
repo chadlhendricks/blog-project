@@ -2,7 +2,6 @@
   <section>
    <div class="row">
      <div class="col-6" id="landingtitle">
-       <h1>Welcome</h1>
      </div>
 
      <div class="col-6">
@@ -50,7 +49,7 @@ section {
   width: 100vw;
   height: 100vh;
   margin: auto;
-  background-image: url("https://picsum.photos/1920/1080");
+  background-image: url("../assets/images/logos/de-an-sun-b57RqS-nQ1c-unsplash.jpg");
   background-size: cover;
   text-align: center;
   position: relative;
@@ -63,6 +62,7 @@ section {
 
 h1 {
   color: red;
+  font-size: 200px;
 }
 
 .row {
@@ -76,12 +76,10 @@ h1 {
 .neu-border {
   border-radius: 30px;
   background: #ffffff73;
-  box-shadow: 8px 8px 15px #e4e4e4, -8px -8px 15px #ffffff;
 }
 .neu-border-inset {
   border-radius: 30px;
   background: #f5f5f5;
-  box-shadow: inset 8px 8px 15px #e4e4e4, inset -8px -8px 15px #ffffff8f;
 }
 
 .form {
@@ -124,6 +122,12 @@ h1 {
 .form-social-btn {
   width: 45%;
   color: #333;
+}
+
+@media screen and (max-width: 500px) {
+  .row {
+    margin-top: 0
+  }
 }
 
 </style>

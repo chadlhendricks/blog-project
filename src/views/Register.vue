@@ -61,7 +61,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 section {
   background-image: url("https://picsum.photos/1920/1080");
   background-size: cover;
@@ -78,13 +78,13 @@ form {
 
 .neu-border {
   border-radius: 30px;
-  background: #f5f5f5;
-  box-shadow: 8px 8px 15px #e4e4e4, -8px -8px 15px #ffffff;
+  background: #b4b2b2;
+  box-shadow: 8px 8px 15px #525151, -8px -8px 15px #5a5959;
 }
 .neu-border-inset {
   border-radius: 30px;
-  background: #f5f5f5;
-  box-shadow: inset 8px 8px 15px #e4e4e4, inset -8px -8px 15px #ffffff;
+  background: #70cab309;
+  box-shadow: inset 8px 8px 15px #9c9c9c, inset -8px -8px 15px #8a8989;
 }
 
 .form {

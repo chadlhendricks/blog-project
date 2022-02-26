@@ -81,7 +81,6 @@ export default {
 <style scoped>
 
 section {
-  background: red;
 }
 .titles{
   color: #fca311ff;

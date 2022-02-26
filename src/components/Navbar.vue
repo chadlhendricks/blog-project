@@ -40,7 +40,7 @@ export default {
   width: 100%;
   text-align: center;
   // #f5f5f5
-  background: #f5f5f5;
+  background: #264653ff;
   z-index: 199;
 }
 
@@ -61,11 +61,14 @@ export default {
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: white;
     padding: 20px;
     text-decoration: none;
     &.router-link-exact-active {
-      color: red;
+      color: #2a9d8fff;
+      font-size: 20px;
+    } &.router-link-exact-hover{
+      color:red
     }
   }
 }

@@ -63,13 +63,18 @@ form {
 
 .neu-border {
   border-radius: 30px;
-  background: #f5f5f5;
-  box-shadow: 8px 8px 15px #e4e4e4, -8px -8px 15px #ffffff;
+  background: #f5f5f56b;
+  box-shadow: 8px 8px 15px #616161, -8px -8px 15px #757575;
 }
+
+/* .neu-border {
+    border-radius: 30px;
+    background: #ffffff73;
+    box-shadow: 8px 8px 15px #403f3f, -8px -8px 15px #716f6f;} */
 .neu-border-inset {
   border-radius: 30px;
-  background: #f5f5f5;
-  box-shadow: inset 8px 8px 15px #e4e4e4, inset -8px -8px 15px #ffffff;
+  background: #818181;
+  box-shadow: inset 8px 8px 15px #5a5a5a, inset -8px -8px 15px #636262;
 }
 
 .form {
