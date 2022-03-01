@@ -4,12 +4,8 @@
   <nav id="nav" :class="{ active: isActive }">
     <router-link @click="toggleNav" to="/">Home</router-link>
     <router-link @click="toggleNav" :to="{ name: 'Products' }">Products</router-link>
-    <router-link @click="toggleNav" :to="{ name: 'About' }">About Us</router-link>
     <router-link @click="toggleNav" :to="{ name: 'Blogs' }">Blogs</router-link>
     <router-link @click="toggleNav" :to="{ name: 'CreateBlog' }">Create Blog</router-link>
-    <router-link @click="toggleNav" :to="{ name: 'Contact' }">Contact Us</router-link>
-
-
   </nav>
 
   <button id="nav-btn" @click="toggleNav">

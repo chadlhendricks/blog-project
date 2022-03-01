@@ -20,5 +20,21 @@ section {
     height: 100vh;
 }
 
-.sections{
+#products {
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+img {
+  height: 200px !important;
+  object-fit: cover;
+}
+
+.card {
+  width: calc((100% / 4) - 15px);
+  min-width: 300px;
+}
+
+.card-title {
+  text-transform: capitalize;
 }

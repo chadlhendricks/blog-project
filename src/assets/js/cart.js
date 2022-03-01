@@ -1,22 +1,4 @@
-<template>
-    <div class="container mt-5 pt-4">
-      <div id="cart"></div>
-      <div
-        id="cart-footer"
-        class="d-flex justify-content-between align-items-center mb-3"
-      ></div>
-    </div>
-
-</template>
-
-<script>
-
-export default {
-  name: 'app',
-  components: {
-  },
-  mounted() {
-   const cart = JSON.parse(localStorage.getItem("cart"))
+const cart = JSON.parse(localStorage.getItem("cart"))
   ? JSON.parse(localStorage.getItem("cart"))
   : [];
 
@@ -121,10 +103,3 @@ function checkout() {
     alert(err);
   }
 }
-
-  },
-}
-
-</script>
-
-<style></style>
