@@ -1,4 +1,5 @@
 <template>
+<section>
   <div class="container d-flex justify-content-end mb-3 mt-5 pt-4">
     <div class="d-flex w-25 ms-3">
       <label for="" class="form-label">Sort by category</label>
@@ -30,6 +31,7 @@
     </div>
   </div>
   <div id="products" class="container d-flex mb-3"></div>
+</section>
 </template>
 
 <script>
@@ -356,4 +358,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+section {
+  background-image: url("../assets/images/logos/de-an-sun-b57RqS-nQ1c-unsplash.jpg");
+  background-size: cover;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3" id="navbarreed">
+  <nav class="navbar navbar-expand-lg navbar-dark" id="navbarreed">
     <div class="container">
       <a class="navbar-brand" href="/">Musa</a>
       <button
@@ -19,12 +19,12 @@
       >
         <ul class="navbar-nav mb-2 mb-lg-0 mr-auto">
           <li class="nav-item">
-            <a class="btn btn-primary me-3 active" aria-current="page" href="/"
+            <a class="btn me-3 active" aria-current="page" href="/"
               >Home</a
             >
           </li>
           <li class="nav-item">
-            <a class="btn btn-primary me-3 position-relative" href="/cart"
+            <a class="btn me-3 position-relative" href="/cart"
               >Cart
               <span
                 id="badge"
@@ -36,7 +36,7 @@
             <!-- Button trigger modal -->
             <button
               type="button"
-              class="btn btn-primary"
+              class="btn"
               data-bs-toggle="modal"
               data-bs-target="#addProductModal"
             >
@@ -140,5 +140,19 @@ export default {};
 .navbar {
   height: 92px;
   background: #264653ff;
+}
+.btn {
+  background: rgb(60, 111, 131);
+}
+
+a, button {
+  color: white;
+}
+a:hover{
+  color: #2a9d8fff;
+}
+
+#badge {
+  z-index: 300;
 }
 </style>
