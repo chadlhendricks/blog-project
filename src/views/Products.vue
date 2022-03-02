@@ -1,4 +1,5 @@
 <template>
+  <Navbar/>
   <ProductsNav />
   <ProductPage/>
   <Footer />

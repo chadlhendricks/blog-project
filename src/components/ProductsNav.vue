@@ -19,11 +19,6 @@
       >
         <ul class="navbar-nav mb-2 mb-lg-0 mr-auto">
           <li class="nav-item">
-            <a class="btn me-3 active" aria-current="page" href="/"
-              >Home</a
-            >
-          </li>
-          <li class="nav-item">
             <a class="btn me-3 position-relative" href="/cart"
               >Cart
               <span
@@ -139,7 +134,7 @@ export default {};
 <style scoped>
 .navbar {
   height: 92px;
-  background: #264653ff;
+  background: rgb(44, 81, 95);
 }
 .btn {
   background: rgb(60, 111, 131);

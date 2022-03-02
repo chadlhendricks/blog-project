@@ -365,8 +365,9 @@ export default {
 
 <style>
 section {
-  background-image: url("../assets/images/logos/de-an-sun-b57RqS-nQ1c-unsplash.jpg");
+  /* background-image: url("../assets/images/logos/de-an-sun-b57RqS-nQ1c-unsplash.jpg"); */
   background-size: cover;
+  background: red;
 }
 
 .form-label {
