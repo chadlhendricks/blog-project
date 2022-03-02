@@ -1,37 +1,42 @@
 <template>
-<section>
-  <div class="container d-flex justify-content-end mb-3 mt-5 pt-4">
-    <div class="d-flex w-25 ms-3">
-      <label for="" class="form-label">Sort by category</label>
-      <select
-        class="form-select"
-        name=""
-        id="sortCategory"
-        onchange="sortCategory()"
-      >
-        <option value="All">All</option>
-        <option value="Calisthenics">Calisthenics</option>
-        <option value="Weightlifting">Weightlifting</option>
-        <option value="Resistance">Resistance</option>
-      </select>
+  <section>
+    <div class="container d-flex justify-content-center mb-3 mt-5 pt-4">
+      <div class="d-flex w-25 ms-3">
+        <label for="" class="form-label">Sort by category</label>
+        <select
+          class="form-select"
+          name=""
+          id="sortCategory"
+          onchange="sortCategory()"
+        >
+          <option value="All">All</option>
+          <option value="Calisthenics">Calisthenics</option>
+          <option value="Weightlifting">Weightlifting</option>
+          <option value="Resistance">Resistance</option>
+        </select>
+      </div>
+      <div class="d-flex w-25 ms-3">
+        <label for="" class="form-label">Sort name</label>
+        <select class="form-select" name="" id="sortName" onchange="sortName()">
+          <option value="ascending">Ascending</option>
+          <option value="descending">Descending</option>
+        </select>
+      </div>
+      <div class="d-flex w-25 ms-3">
+        <label for="" class="form-label">Sort price</label>
+        <select
+          class="form-select"
+          name=""
+          id="sortPrice"
+          onchange="sortPrice()"
+        >
+          <option value="ascending">Ascending</option>
+          <option value="descending">Descending</option>
+        </select>
+      </div>
     </div>
-    <div class="d-flex w-25 ms-3">
-      <label for="" class="form-label">Sort name</label>
-      <select class="form-select" name="" id="sortName" onchange="sortName()">
-        <option value="ascending">Ascending</option>
-        <option value="descending">Descending</option>
-      </select>
-    </div>
-    <div class="d-flex w-25 ms-3">
-      <label for="" class="form-label">Sort price</label>
-      <select class="form-select" name="" id="sortPrice" onchange="sortPrice()">
-        <option value="ascending">Ascending</option>
-        <option value="descending">Descending</option>
-      </select>
-    </div>
-  </div>
-  <div id="products" class="container d-flex mb-3"></div>
-</section>
+    <div id="products" class="container d-flex mb-3"></div>
+  </section>
 </template>
 
 <script>
@@ -45,50 +50,50 @@ export default {
           {
             title:
               "ProsourceFit Dip Stand Station, Heavy Duty Adjustable Height Upper Body Equipment for Home Gym for Tricep Dips, Pull-Ups",
-            category: "Calisthenics",
+            category: "Keyboards",
             price: 799.99,
             img: "https://m.media-amazon.com/images/I/71G9QDMhEoL._AC_SL1500_.jpg",
           },
           {
             title: "Sporzon Rubber Encased Hex Dumbbell",
-            category: "Weightlifting",
+            category: "Guitars",
             price: 599.99,
             img: "https://m.media-amazon.com/images/I/919d46mH0cL._AC_SL1500_.jpg",
           },
           {
             title: "Push-up Stand, 2 PCS Wood Pushup Bars",
-            category: "Calisthenics",
+            category: "Keyboards",
             price: 249.99,
             img: "https://m.media-amazon.com/images/I/51oqIsi7EeL._AC_SL1000_.jpg",
           },
           {
             title: "Gymnastics Rings Wooden Olympic Rings",
-            category: "Calisthenics",
+            category: "Keyboards",
             price: 199.99,
             img: "https://m.media-amazon.com/images/I/71+YlSOIsGL._AC_SL1500_.jpg",
           },
           {
             title:
               "Synergee Fixed Easy Curl Bar Pre Weighted Curved Steel Bar with Rubber Weights",
-            category: "Weightlifting",
+            category: "Guitars",
             price: 899.99,
             img: "https://m.media-amazon.com/images/I/61QaJJaBFnL._AC_SL1500_.jpg",
           },
           {
             title: "Resistance Exercise Bands",
-            category: "Resistance",
+            category: "Drums",
             price: 129.99,
             img: "https://m.media-amazon.com/images/I/61Aa53b4P3L._AC_SL1500_.jpg",
           },
           {
             title: "Gaiam Restore 3-in-1 Resistance Band Kit ",
-            category: "Resistance",
+            category: "Drums",
             price: 159.99,
             img: "https://m.media-amazon.com/images/I/810VI8ey2sL._AC_SL1500_.jpg",
           },
           {
             title: "Neoprene Workout Dumbbell",
-            category: "Weightlifting",
+            category: "Guitars",
             price: 1099.99,
             img: "https://m.media-amazon.com/images/I/61KY8F91JIL._AC_SL1500_.jpg",
           },
@@ -362,5 +367,9 @@ export default {
 section {
   background-image: url("../assets/images/logos/de-an-sun-b57RqS-nQ1c-unsplash.jpg");
   background-size: cover;
+}
+
+.form-label {
+  color: white
 }
 </style>

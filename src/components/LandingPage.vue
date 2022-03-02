@@ -41,8 +41,37 @@
 </template>
 
 <script>
-export default {};
-</script>
+export default {
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    login() {
+      fetch("https://fente.herokuapp.com/users", {
+        method: "POST",
+        body: JSON.stringify({
+          email: this.email,
+          password: this.password,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => {
+          localStorage.setItem("jwt", json.jwt);
+          alert("User logged in");
+          this.$router.push({ name: "Products" });
+        })
+        .catch((err) => {
+          alert(err);
+        });
+    },
+  },
+};</script>
 
 <style scoped>
 section {

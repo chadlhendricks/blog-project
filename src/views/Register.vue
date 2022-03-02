@@ -56,7 +56,31 @@ export default {
   },
   methods: {
     register() {
-      console.log(this.name, this.email, this.contact, this.password);
+      fetch("https://fente.herokuapp.com/users", {
+        method: "POST",
+        body: JSON.stringify({
+          name: this.name,
+          email: this.email,
+          contact: this.contact,
+          password: this.password,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => {
+          localStorage.setItem("jwt", json.jwt);
+          alert("User is signed up");
+          (this.name = ""),
+            (this.email = ""),
+            (this.contact = ""),
+            (this.password = ""),
+            this.$router.push({ name: "Login" });
+        })
+        .catch((err) => {
+          alert(err);
+        });
     },
   },
 };
@@ -73,7 +97,7 @@ form {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
 }
 
 .neu-border {

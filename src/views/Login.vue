@@ -31,6 +31,7 @@
     </form>
   </section>
 </template>
+
 <script>
 export default {
   data() {
@@ -41,7 +42,25 @@ export default {
   },
   methods: {
     login() {
-      console.log(this.email, this.password);
+      fetch("https://fente.herokuapp.com/users", {
+        method: "POST",
+        body: JSON.stringify({
+          email: this.email,
+          password: this.password,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => {
+          localStorage.setItem("jwt", json.jwt);
+          alert("User logged in");
+          this.$router.push({ name: "Products" });
+        })
+        .catch((err) => {
+          alert(err);
+        });
     },
   },
 };
