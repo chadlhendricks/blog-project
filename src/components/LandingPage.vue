@@ -1,26 +1,28 @@
 <template>
   <section>
-   <div class="row">
-     <div class="col-6" id="landingtitle">
-     </div>
+    <div class="row">
+      <div class="col-6" id="landingtitle">
+        <h3 class="heading">Musa</h3>
+        <p class="paragraph">When words fail, music speaks.</p>
+      </div>
 
-     <div class="col-6">
-       <form @submit.prevent="login" class="form neu-border">
-      <h2 class="form-heading">Login</h2>
-      <input
-        class="form-input neu-border-inset"
-        type="email"
-        v-model="email"
-        placeholder="Email"
-      />
-      <input
-        class="form-input neu-border-inset"
-        type="password"
-        v-model="password"
-        placeholder="Password"
-      />
-      <button type="submit" class="form-btn neu-border">Sign in</button>
-      <!-- <div class="form-social-login">
+      <div class="col-6" id="landingform">
+        <form @submit.prevent="login" class="form neu-border">
+          <h2 class="form-heading">Login</h2>
+          <input
+            class="form-input neu-border-inset"
+            type="email"
+            v-model="email"
+            placeholder="Email"
+          />
+          <input
+            class="form-input neu-border-inset"
+            type="password"
+            v-model="password"
+            placeholder="Password"
+          />
+          <button type="submit" class="form-btn neu-border">Sign in</button>
+          <!-- <div class="form-social-login">
         <button class="form-btn neu-border form-social-btn">
           <i class="fab fa-google"></i>
         </button>
@@ -29,15 +31,20 @@
         </button>
       </div> -->
 
-      <p>
-        Not a member?
-        <router-link :to="{ name: 'Register' }">Create an account</router-link>
-      </p>
-    </form>
-     </div>
-   </div>
+          <p>
+            Not a member?
+            <router-link :to="{ name: 'Register' }"
+              >Create an account</router-link
+            >
+          </p>
+          <p>
+            Closing your Account?
+            <router-link :to="{ name: 'Delete' }">Delete User</router-link>
+          </p>
+        </form>
+      </div>
+    </div>
   </section>
-
 </template>
 
 <script>
@@ -51,7 +58,7 @@ export default {
   methods: {
     login() {
       fetch("https://fente.herokuapp.com/users", {
-        method: "POST",
+        method: "PATCH",
         body: JSON.stringify({
           email: this.email,
           password: this.password,
@@ -62,23 +69,28 @@ export default {
       })
         .then((response) => response.json())
         .then((json) => {
-          localStorage.setItem("jwt", json.jwt);
-          alert("User logged in");
-          this.$router.push({ name: "Products" });
+          if (json.jwt) {
+            localStorage.setItem("jwt", json.jwt);
+            alert("User logged in");
+            return this.$router.push({ name: "Products" });
+          }
+          alert("cannot login");
         })
         .catch((err) => {
           alert(err);
         });
     },
   },
-};</script>
+};
+</script>
 
 <style scoped>
 section {
   width: 100vw;
   height: 100vh;
   margin: auto;
-  background-image: url("../assets/images/logos/de-an-sun-b57RqS-nQ1c-unsplash.jpg");
+  background: linear-gradient(rgba(59, 19, 19, 0.5), rgba(54, 45, 45, 0.5)),
+    url("../assets/images/logos/background.jpeg");
   background-size: cover;
   text-align: center;
   position: relative;
@@ -86,12 +98,17 @@ section {
 }
 
 #landingtitle {
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
-h1 {
-  color: red;
-  font-size: 200px;
+.heading {
+  font-size: 100px;
+  color: whitesmoke;
+}
+
+.paragraph {
+  font-size: 28px;
+  color: grey;
 }
 
 .row {
@@ -99,7 +116,6 @@ h1 {
   padding-top: 270px;
   backdrop-filter: blur(5px);
   height: 100vh;
-
 }
 
 .neu-border {
@@ -155,8 +171,33 @@ h1 {
 
 @media screen and (max-width: 500px) {
   .row {
-    margin-top: 0
+    top: 0;
   }
 }
 
+#landingform {
+  -webkit-animation: slide-right 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-right 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+}
 </style>

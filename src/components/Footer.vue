@@ -1,5 +1,4 @@
 <template>
-<!-- Footer -->
 <footer class="text-center text-lg-start text-muted">
   <!-- Section: Social media -->
 
@@ -117,14 +116,14 @@ export default {
 footer {
   z-index: 202;
   bottom: 0;
-  background: #264653ff;
+  background: black;
 }
 
 p {
   color: white;
 }
 p:hover {
-  color: #264653ff
+  color: rgb(59, 255, 232)
 }
 
 h6 {

@@ -1,9 +1,7 @@
 <template>
-  <div class="home">
     <Navbar />
     <LandingPage />
     <Footer />
-  </div>
 </template>
 
 <script>

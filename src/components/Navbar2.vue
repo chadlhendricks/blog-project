@@ -3,6 +3,8 @@
 
   <nav id="nav" :class="{ active: isActive }">
     <router-link @click="toggleNav" to="/">Home</router-link>
+    <router-link @click="toggleNav" :to="{ name: 'Products' }">Products</router-link>
+    <router-link @click="toggleNav" :to="{ name: 'Home' }">Logout</router-link>
   </nav>
 
   <button id="nav-btn" @click="toggleNav">

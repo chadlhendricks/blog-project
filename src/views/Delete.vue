@@ -1,7 +1,7 @@
 <template>
   <section>
     <form @submit.prevent="login" class="form neu-border">
-      <h2 class="form-heading">Login</h2>
+      <h2 class="form-heading">Delete User</h2>
       <input
         class="form-input neu-border-inset"
         type="email"
@@ -14,7 +14,7 @@
         v-model="password"
         placeholder="Password"
       />
-      <button type="submit" class="form-btn neu-border">Sign in</button>
+      <button type="submit" class="form-btn neu-border">Delete User</button>
       <!-- <div class="form-social-login">
         <button class="form-btn neu-border form-social-btn">
           <i class="fab fa-google"></i>
@@ -43,7 +43,7 @@ export default {
   methods: {
     login() {
       fetch("https://fente.herokuapp.com/users", {
-        method: "PATCH",
+        method: "DELETE",
         body: JSON.stringify({
           email: this.email,
           password: this.password,
@@ -55,13 +55,10 @@ export default {
       })
         .then((response) => response.json())
         .then((json) => {
-          if(json.jwt){
-
-            localStorage.setItem("jwt", json.jwt);
-            
-            alert("User logged in");
-            this.$router.push({ name: "Products" });
-          }
+          localStorage.setItem("jwt", json.jwt);
+          
+          alert("User logged in");
+          this.$router.push({ name: "Products" });
         })
         .catch((err) => {
           alert(err);
