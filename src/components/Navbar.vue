@@ -1,6 +1,5 @@
 <template>
 
-
   <nav id="nav" :class="{ active: isActive }">
     <router-link @click="toggleNav" to="/">Home</router-link>
   </nav>

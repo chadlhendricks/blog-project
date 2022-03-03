@@ -1,5 +1,6 @@
 <template>
   <section>
+<<<<<<< HEAD
     <div class="row">
       <div class="col-6" id="landingtitle">
         <h3 class="heading">Musa</h3>
@@ -23,6 +24,30 @@
           />
           <button type="submit" class="form-btn neu-border">Sign in</button>
           <!-- <div class="form-social-login">
+=======
+   <div class="row">
+     <div class="col-sm-auto col-md-auto col-lg- col-xl- col-xxl" id="landingtitle">
+       <h1>Hi there</h1>
+     </div>
+
+     <div class="col-sm-auto col-md-auto col-lg- col-xl- col-xxl" id="landingform">
+       <form @submit.prevent="login" class="form neu-border">
+      <h2 class="form-heading">Login</h2>
+      <input
+        class="form-input neu-border-inset"
+        type="email"
+        v-model="email"
+        placeholder="Email"
+      />
+      <input
+        class="form-input neu-border-inset"
+        type="password"
+        v-model="password"
+        placeholder="Password"
+      />
+      <button type="submit" class="form-btn neu-border">Sign in</button>
+      <!-- <div class="form-social-login">
+>>>>>>> d8335cd5bbcaec8e84d7ab7073641bd23bca3dc9
         <button class="form-btn neu-border form-social-btn">
           <i class="fab fa-google"></i>
         </button>
@@ -86,7 +111,7 @@ export default {
 
 <style scoped>
 section {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   margin: auto;
   background: linear-gradient(rgba(59, 19, 19, 0.5), rgba(54, 45, 45, 0.5)),
@@ -97,6 +122,7 @@ section {
   z-index: 10;
 }
 
+<<<<<<< HEAD
 #landingtitle {
   margin-top: 150px;
 }
@@ -109,6 +135,11 @@ section {
 .paragraph {
   font-size: 28px;
   color: grey;
+=======
+h1 {
+  color: red;
+  font-size: 200px;
+>>>>>>> d8335cd5bbcaec8e84d7ab7073641bd23bca3dc9
 }
 
 .row {
@@ -169,10 +200,44 @@ section {
   color: #333;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 500px) {
   .row {
     top: 0;
+=======
+#landingform {
+  -webkit-animation: slide-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+>>>>>>> d8335cd5bbcaec8e84d7ab7073641bd23bca3dc9
   }
+  100% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+#landingtitle {
+  margin-top: 0px;
+  top: 0;
+}
 }
 
 #landingform {

@@ -1,5 +1,9 @@
 <template>
+<<<<<<< HEAD
   <Navbar2 />
+=======
+  <Navbar/>
+>>>>>>> d8335cd5bbcaec8e84d7ab7073641bd23bca3dc9
   <ProductsNav />
   <ProductPage />
   <Footer />
