@@ -42,26 +42,24 @@ export default {
   },
   methods: {
     login() {
-      fetch("https://fente.herokuapp.com/users", {
-        method: "PATCH",
+      fetch("https://fente.herokuapp.com/users/login", {
+        method: "POST",
         body: JSON.stringify({
           email: this.email,
           password: this.password,
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
-
         },
       })
         .then((response) => response.json())
         .then((json) => {
-          if(json.jwt){
-
+          if (json.jwt) {
             localStorage.setItem("jwt", json.jwt);
-            
             alert("User logged in");
-            this.$router.push({ name: "Products" });
+            return this.$router.push({ name: "Products" });
           }
+          alert("cannot login");
         })
         .catch((err) => {
           alert(err);

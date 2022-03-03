@@ -14,9 +14,7 @@
             <i class="fas fa-gem me-3"></i>Musa
           </h6>
           <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
-          </p>
+                  </p>
         </div>
         <!-- Grid column -->
 
