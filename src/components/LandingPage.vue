@@ -57,8 +57,8 @@ export default {
   },
   methods: {
     login() {
-      fetch("https://fente.herokuapp.com/users", {
-        method: "PATCH",
+      fetch("https://fente.herokuapp.com/users/login", {
+        method: "POST",
         body: JSON.stringify({
           email: this.email,
           password: this.password,
