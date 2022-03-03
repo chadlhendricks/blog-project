@@ -134,11 +134,7 @@ export default {};
 <style scoped>
 .navbar {
   height: 92px;
-<<<<<<< HEAD
-  background: rgb(43, 79, 94);
-=======
   background: rgb(44, 81, 95);
->>>>>>> d8335cd5bbcaec8e84d7ab7073641bd23bca3dc9
 }
 .btn {
   background: rgb(60, 111, 131);
