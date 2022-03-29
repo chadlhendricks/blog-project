@@ -1,12 +1,6 @@
 <template>
   <section>
     <div class="row">
-      <div class="col-6" id="landingtitle">
-        <h3 class="heading">Musa</h3>
-        <p class="paragraph">When words fail, music speaks.</p>
-      </div>
-
-      <div class="col-6" id="landingform">
         <form @submit.prevent="login" class="form neu-border">
           <h2 class="form-heading">Login</h2>
           <input
@@ -22,15 +16,6 @@
             placeholder="Password"
           />
           <button type="submit" class="form-btn neu-border">Sign in</button>
-          <!-- <div class="form-social-login">
-        <button class="form-btn neu-border form-social-btn">
-          <i class="fab fa-google"></i>
-        </button>
-        <button class="form-btn neu-border form-social-btn">
-          <i class="fab fa-facebook-f"></i>
-        </button>
-      </div> -->
-
           <p>
             Not a member?
             <router-link :to="{ name: 'Register' }"
@@ -43,7 +28,6 @@
           </p>
         </form>
       </div>
-    </div>
   </section>
 </template>
 
@@ -87,7 +71,7 @@ export default {
 <style scoped>
 section {
   width: 100vw;
-  height: 100vh;
+  height: 88vh;
   margin: auto;
   background: linear-gradient(rgba(59, 19, 19, 0.5), rgba(54, 45, 45, 0.5)),
     url("../assets/images/logos/background.jpeg");
@@ -113,9 +97,9 @@ section {
 
 .row {
   text-align: center;
-  padding-top: 270px;
+  padding-top: 100px;
   backdrop-filter: blur(5px);
-  height: 100vh;
+  height: 80vh;
 }
 
 .neu-border {
@@ -133,9 +117,9 @@ section {
   justify-content: center;
   padding: 40px;
   gap: 20px;
-  width: 100%;
+  width: 50%;
   margin-inline: auto;
-  max-width: 600px;
+  margin-bottom: 100px
 }
 
 .form-heading {
