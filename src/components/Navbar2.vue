@@ -1,28 +1,47 @@
 <template>
-<div class="nav">
-  <input type="checkbox" id="nav-check">
-  <div class="nav-header">
-    <div class="nav-title">
-      Musa
+  <div class="nav">
+    <input type="checkbox" id="nav-check" />
+    <div class="nav-header">
+      <div class="nav-title">Musa</div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <div class="nav-links">
+      <router-link @click="toggleNav" to="/">Home</router-link>
+      <router-link @click="toggleNav" :to="{ name: 'Products' }"
+        >Products</router-link
+      >
+
+      <a class="" href="/cart"
+        >Cart
+        <span
+          id="badge"
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+        ></span
+      ></a>
+
+      <button
+        type="button"
+        class="btn"
+        data-bs-toggle="modal"
+        data-bs-target="#addProductModal" style="color: white; margin-left: 50px"
+      >
+        Add a product
+      </button>
+
+        <button @click="logout()" type="button" class="btn">
+        <router-link to="/" class="logoutbutt">Logout</router-link>
+      </button>
+
+
     </div>
   </div>
-  <div class="nav-btn">
-    <label for="nav-check">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-  </div>
-  
-  <div class="nav-links">
-    <router-link @click="toggleNav" to="/">Home</router-link>
-    <router-link @click="toggleNav" :to="{ name: 'Products' }">Products</router-link>
-
-     <button @click="logout()" type="button" class="btn">
-      <router-link to="/" class="logoutbutt">Logout</router-link>
-    </button>
-  </div>
-</div>
 </template>
 
 <script>
@@ -30,7 +49,7 @@ export default {
   data() {
     return {
       user: JSON.parse(localStorage.getItem("user")),
-      isLoggedIn: false
+      isLoggedIn: false,
     };
   },
   methods: {
@@ -39,8 +58,7 @@ export default {
       alert("User logged out");
     },
   },
-}  
-
+};
 </script>
 
 <style lang="scss">
@@ -50,7 +68,7 @@ export default {
 
 body {
   margin: 0px;
-  font-family: 'segoe ui';
+  font-family: "segoe ui";
 }
 
 .nav {
@@ -65,7 +83,7 @@ body {
   color: white;
   height: 100%;
   padding: 20px;
-  }
+}
 
 .nav > .nav-header {
   display: inline;
@@ -103,7 +121,7 @@ body {
   display: none;
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
   .nav > .nav-btn {
     display: inline-block;
     position: absolute;
@@ -116,7 +134,8 @@ body {
     height: 50px;
     padding: 13px;
   }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
     background-color: rgba(0, 0, 0, 0.3);
   }
   .nav > .nav-btn > label > span {

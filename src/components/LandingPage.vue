@@ -99,7 +99,7 @@ section {
   text-align: center;
   padding-top: 100px;
   backdrop-filter: blur(5px);
-  height: 80vh;
+  height: 70vh;
 }
 
 .neu-border {

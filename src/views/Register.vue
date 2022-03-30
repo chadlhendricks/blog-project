@@ -1,5 +1,6 @@
 <template>
   <section>
+    <Navbar/>
     <form @submit.prevent="register" class="form neu-border">
       <h2 class="form-heading">Register</h2>
       <input
@@ -41,12 +42,17 @@
         <router-link :to="{ name: 'Login' }">Sign in</router-link>
       </p>
     </form>
+      <Footer/>
   </section>
 </template>
 
 <script>
 
+import Navbar from "@/components/Navbar.vue"
+import Footer from "@/components/Footer.vue"
+
 export default {
+  components: { Navbar, Footer },
   data() {
     return {
       name: "",
@@ -88,7 +94,7 @@ export default {
 </script>
 <style scoped>
 section {
-  background-image: url("https://picsum.photos/1920/1080");
+  background: #4d4d4d;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
@@ -103,13 +109,11 @@ form {
 
 .neu-border {
   border-radius: 30px;
-  background: #b4b2b2;
-  box-shadow: 8px 8px 15px #525151, -8px -8px 15px #5a5959;
+  background: #ffffff73;
 }
 .neu-border-inset {
   border-radius: 30px;
-  background: #70cab309;
-  box-shadow: inset 8px 8px 15px #9c9c9c, inset -8px -8px 15px #8a8989;
+  background: #f5f5f5;
 }
 
 .form {

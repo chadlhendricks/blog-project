@@ -15,10 +15,6 @@ burnt-sienna: #e76f51ff; */
   -moz-osx-font-smoothing: grayscale;
 }
 
-section {
-    min-height: 100vh;
-}
-
 #products {
   flex-wrap: wrap;
   gap: 20px;

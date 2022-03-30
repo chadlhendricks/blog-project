@@ -2,9 +2,9 @@
 <div class="nav">
   <input type="checkbox" id="nav-check">
   <div class="nav-header">
-    <div class="nav-title">
+    <a class="nav-title" href="/">
       Musa
-    </div>
+    </a>
   </div>
   <div class="nav-btn">
     <label for="nav-check">

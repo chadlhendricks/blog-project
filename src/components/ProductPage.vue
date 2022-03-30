@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container d-flex justify-content-center mb-3 mt-5 pt-4">
+    <div class="container d-flex justify-content-center mb-3 pt-4">
       <div class="d-flex w-25 ms-3">
         <label for="" class="form-label">Sort by category</label>
         <select
@@ -365,10 +365,8 @@ export default {
 section {
   /* background-image: url("../assets/images/logos/de-an-sun-b57RqS-nQ1c-unsplash.jpg"); */
   background-size: cover;
-  background: red;
-}
-
-#productspage {
+  background: #4d4d4d;
+  height: 120vh;
 }
 
 .form-label {
@@ -384,6 +382,5 @@ section {
   height: 400px;
   width: 400px;
 }
-
 
 </style>
