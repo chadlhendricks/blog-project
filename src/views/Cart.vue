@@ -1,4 +1,7 @@
 <template>
+<section>
+
+</section>
 
 
 </template>
@@ -7,4 +10,13 @@
 
 </script>
 
-<style></style>
+
+
+<style >
+section {
+  background-color: #4d4d4d;
+  height: 100vh;
+}
+
+
+</style>
