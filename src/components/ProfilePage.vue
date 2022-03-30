@@ -1,11 +1,12 @@
 <template>
-  <div class="profile">    
+<section>
+  <div class="profile" style="margin: auto; ">    
 
-<div class="boxxie"  v-for="user of users" :key="user._id" >
+<div class="card"  v-for="user of users" :key="user._id" >
   
 <h1>{{user.name}}</h1>
-<img :src="user.avatar" class="pp" alt="profile-pic">
-<!-- <img src="@/assets/person.png" class="profile-pic" alt="pp"> -->
+<!-- <img :src="user.avatar" class="pp" alt="profile-pic"> -->
+<img src="@/assets/images/logos/png.png" class="profile-pic" alt="pp" style="height: 100px; width: 10opx">
         <h3>EMAIL</h3>
 <p>{{user.email}}</p>
 <h3>CONTACT</h3>
@@ -61,8 +62,8 @@
 </div>
   </div>
 
-
-
+</section>
+  
 </template>
 <script>
 import axios from "axios";
@@ -144,6 +145,10 @@ mounted() {
 </script>
 
 <style scoped>
+
+section {
+  background: brown
+}
 .boxxie{
   margin: 10px;
   border: 2px solid white;
