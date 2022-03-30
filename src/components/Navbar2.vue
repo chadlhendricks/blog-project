@@ -2,7 +2,11 @@
   <div class="nav">
     <input type="checkbox" id="nav-check" />
     <div class="nav-header">
-      <div class="nav-title">Musa</div>
+      <div class="nav-title">
+         <router-link @click="toggleNav" :to="{ name: 'Home' }" style="color: white"
+        >Musa</router-link
+      >
+      </div>
     </div>
     <div class="nav-btn">
       <label for="nav-check">

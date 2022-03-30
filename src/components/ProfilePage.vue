@@ -164,7 +164,7 @@ mounted() {
 }
 
 h1,h5,h3{
-  color:red;
+  color:brown;
 }
 p{
   color: white;
