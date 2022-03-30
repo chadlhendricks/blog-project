@@ -113,11 +113,10 @@ export default {
           <p class="card-text">R${product.price}</p>
           <div class="d-flex mb-3">
             <input type="number" class="form-control" value=1 min=1 id="addToCart${position}">
-            <button type="button" class="btn btn-secondary ms-3" onclick="addToCart(${position})"><i class="fas fa-cart-plus"></i></button>
+            <a href="/cart" type="button" class="btn btn-secondary ms-3" onclick="addToCart(${position})"><i class="fas fa-cart-plus"></i></a>
           </div>
           
           
-          \\
           </div>
           <div class="d-flex justify-content-end card-footer">
             <button type="button" class="btn btn-primary w-50" data-bs-toggle="modal" data-bs-target="#editProduct${position}"><i class="bi bi-pencil" style="color:white"></i></button>
@@ -366,7 +365,7 @@ section {
   /* background-image: url("../assets/images/logos/de-an-sun-b57RqS-nQ1c-unsplash.jpg"); */
   background-size: cover;
   background: #4d4d4d;
-  height: 120vh;
+  height: 130vh;
 }
 
 .form-label {

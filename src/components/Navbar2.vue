@@ -13,9 +13,11 @@
     </div>
 
     <div class="nav-links">
-      <router-link @click="toggleNav" to="/">Home</router-link>
       <router-link @click="toggleNav" :to="{ name: 'Products' }"
         >Products</router-link
+      >
+      <router-link @click="toggleNav" :to="{ name: 'Profile' }"
+        >Profile</router-link
       >
 
       <a class="" href="/cart"
